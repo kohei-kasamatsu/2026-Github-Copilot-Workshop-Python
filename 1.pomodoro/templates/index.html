@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="app-card" aria-labelledby="app-title">
+        <header class="app-header">
+          <h1 id="app-title">{{ page_title }}</h1>
+        </header>
+
+        <section class="app-status" aria-label="タイマーの状態">
+          <p class="status-label">作業中</p>
+          <p class="status-time">25:00</p>
+        </section>
+
+        <section class="app-actions" aria-label="タイマー操作">
+          <button type="button">開始</button>
+          <button type="button">リセット</button>
+        </section>
+      </section>
+    </main>
+
+    <script id="initial-settings" type="application/json">{{ initial_settings | tojson }}</script>
+    <script type="module" src="{{ url_for('static', filename='js/timer-ui.js') }}"></script>
+  </body>
+</html>
