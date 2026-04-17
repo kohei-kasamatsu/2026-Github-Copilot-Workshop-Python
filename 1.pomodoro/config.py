@@ -1,0 +1,6 @@
+class AppConfig:
+    APP_TITLE = "Pomodoro Timer"
+    WORK_DURATION_MINUTES = 25
+    SHORT_BREAK_MINUTES = 5
+    LONG_BREAK_MINUTES = 15
+    LONG_BREAK_INTERVAL = 4
